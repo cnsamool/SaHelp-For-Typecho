@@ -18,4 +18,4 @@ SaHelp Theme 是一款 使用说明 / 帮助文件 / WIKI文档使用的Typecho�
 http://help.sacrm.com
 
 
-文章来源于《傻猫网络日志》 https://dayong.wang/50419.html
+文章来源于《傻猫网络日志》 https://samool.com/50419.html
