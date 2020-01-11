@@ -1,0 +1,297 @@
+/*
+grace 响应式 UI 框架
+v 1.01
+作者 : 深海 5213606@qq.com
+*/
+*{margin:0px; padding:0px; font-size:14px; color:#222; font-family:Microsoft Yahei, PingFangSC-Regular, sans-serif; -webkit-font-smoothing:subpixel-antialiased; font-smoothing:subpixel-antialiased;  outline:none; font-style: normal;}
+body{background:#FFFFFF;}
+textarea{font-size:14px;}
+div{overflow:hidden; height:auto;}
+a{text-decoration:none; color:#333;}
+a:hover{text-decoration:underline;}
+a:visited{text-decoration:none;}
+img{border:none;}
+ul{list-style-type:none;}
+li{list-style:none; overflow:hidden;}
+
+.grace-table td{padding:10px 3px; line-height:30px;}
+.grace-input{height:20px; line-height:20px; padding:8px 2%; border-radius:0px; border:1px solid #D1D1D1; border-top-color:#999; font-size: 14px; background-color:#FFF; color: #999; width:92%;}
+.grace-textarea{height:66px; line-height:20px; padding:8px 2%; border-radius:1px; border:none; background-color:#F7F8F9; color:#999; width:96%;}
+.grace-input-items{}
+.grace-input-items label{display:block; border-radius:3px; background:#F1F4F5; line-height:20px; padding:6px 12px; float:left; margin-right:12px; cursor:pointer;}
+.grace-input-items input[type=radio]{display:none;}
+.grace-input-items input[type=radio]:checked + label{background:#1B8AFF; color:#FFF;}
+
+.grace-button{background:#1B8AFF; color:#FFF; cursor:pointer; height:36px; line-height:36px; border:none; padding:0px 15px;}
+.grace-button:active{background:#2F4056;}
+
+.grace-border-bottom{border-bottom:1px #D3D6DA dashed;}
+.grace-border-top{border-top:1px #D3D6DA dashed;}
+.grace-noborder{border:none !important;}
+
+/* blockquote */
+blockquote{font-size:15px; line-height:2em; padding:10px 20px; color:#000000; background:#F7F8F9; border-left:5px solid #009688; margin:15px 0; text-indent:0;}
+/* break */
+.grace-break{word-break:break-all; word-wrap:break-word; overflow:hidden; white-space:pre-wrap;}
+
+/* common */
+.grace-main{width:1200px; margin:0 auto;}
+.grace-margin-top{margin-top:38px !important;}
+.grace-l{float:left !important; width:238px;}
+.grace-fl{float:left !important;}
+.grace-r{float:right !important; width:930px;}
+.grace-fr{float:right !important;}
+.grace-mobile-hide{}
+
+/* content */
+.grace-content{line-height:2.5em; overflow:hidden; font-size:15px;}
+.grace-content P{line-height:2.5em; overflow:hidden; font-size:15px;}
+.grace-content pre{background:#F6F7F8; width:98%; letter-spacing:0px; font-size:14px; line-height:2.2em; padding:8px 1% !important; margin:8px 0px; word-break:break-all; word-wrap:break-word; color:#333; overflow:hidden; white-space: pre-wrap;}
+.grace-content strong{font-size:17px; font-weight:700; color:#000000;}
+.grace-content a{color:#0000FF;}
+.grace-content td{padding:4px 8px;}
+.grace-content thead td{background:#F1F4F5; font-weight:700;}
+.grace-indent{text-indent:2em;}
+
+
+/* h */
+.grace-h1{font-size:42px; line-height:1.8em; font-weight:400;}
+.grace-h2{font-size:33px; line-height:1.8em; font-weight:400;}
+.grace-h3{font-size:24px; line-height:1.8em; }
+
+.grace-text-center{text-align:center;}
+
+/* color */
+.grace-color-white{color:#FFF;}
+.grace-color-main{color:#2F4056;}
+.grace-color-green{color:#1B8AFF;}
+
+/* header */
+.grace-header{width:100%; overflow:visible; height:58px; width:100%; position:fixed; z-index:10; top:0px; left:0px; background:#F2F2F2;}
+.grace-header-line{height:58px;}
+
+/* nav */
+.grace-nav{float:left;}
+.grace-nav li{float:left; margin:0px 8px; position:relative !important;}
+.grace-nav li a{display:block; float:left; color:#222; height:53px; border-bottom:5px solid #F2F2F2; font-size:16px; line-height:53px; padding:0px 20px;}
+.grace-nav li a:hover{text-decoration:none; border-color:#1B8AFF;}
+.grace-nav li .grace-current{border-color:#1B8AFF !important;}
+.grace-nav li i{color:#FFF; padding-right:8px;}
+.grace-nav li img{width:30px; height:30px; border-radius:30px; margin-top:13px; float:right; margin-right:10px;}
+.grace-menu{width:44px; height:44px; line-height:44px; position:fixed; z-index:11; top:0; right:0; text-align:center; color:#FFF; display:none;}
+.grace-menu i{font-size:28px; color:#FFF;}
+
+/* logo */
+.grace-logo{float:left; margin:5px 0px; width:180px;}
+.grace-logo img{width:100%;}
+
+/* banner */
+.grace-banner{background:no-repeat top center; background-size:100% 358px; height:358px;}
+.grace-banner .grace-banner-top1{padding-top:88px;}
+.grace-banner .grace-banner-top2{padding-top:13px;}
+
+.grace-banner-samll{background:no-repeat top center; background-size:100% 258px; height:258px;}
+.grace-banner-samll .grace-banner-top1{padding-top:38px;}
+.grace-banner-samll .grace-banner-top2{padding-top:13px;}
+
+/* titles */
+.grace-line-title{position:relative; overflow:visible; border-bottom:1px solid #F8F8F9; text-align:center; margin-top:5px;}
+.grace-line-title span{position:relative; top:9px; font-size:18px; background: #fff; padding: 0 30px;}
+.grace-line-title a{display:block; position:absolute; top:15px; right:0px; background:#fff; padding:0 20px; color:#2F4056;}
+.grace-line-title a i{padding-right:8px;}
+
+/* block lists */
+.grace-blocks{padding:20px 0px; margin-top:18px;}
+.grace-blocks li{width:27.2%; float:left; background:#FAFAFA; margin:10px 1%; padding:8px 2%;}
+.grace-block-title{font-size:18px; line-height:35px; text-align:center; margin-top:6px; color:#525252;}
+.grace-block-title i{margin-right:10px; font-size:20px; color:#525252;}
+.grace-block-title2{font-size:15px; line-height:1.6em; text-align:center; margin-top:5px; color:#525252;}
+.grace-block-text{line-height:2.2em; padding:5px 0; color:#888; padding-bottom:8px;}
+.grace-blocks-img{width:100%;}
+.grace-blocks-img img{width:100%;}
+.grace-blocks li:hover{box-shadow:0px 1px #1B8AFF; }
+.grace-blocks li:hover .grace-block-title{color:#1B8AFF; }
+.grace-blocks li:hover i{color:#1B8AFF; }
+.grace-blocks a{display:block; overflow:hidden;}
+.grace-blocks a:hover{text-decoration:none;}
+
+/* footer */
+.grace-footer-line{height:28px; width:100%;}
+.grace-footer{background:#FAFAFA; line-height:2em; padding:20px 0px; text-align:center; color:#525252;}
+.grace-footer *{text-align:center; color:#525252}
+
+/* dialog */
+#grace-dialog-mask{position:fixed; z-index:9990; top:0; right:0; bottom:0; left:0; overflow: auto; text-align:center; background:#3D414A; display:none;}
+#grace-dialog-mask *{opacity:1;}
+#grace-dialog-msg{width:398px; height:auto; margin:auto auto; padding:10px 15px; background:#FFFFFF; overflow:hidden !important;}
+#grace-dialog-msg div{overflow:hidden !important;}
+#grace-dialog-close{height:30px; line-height:30px; text-align:left; font-size:16px; cursor:pointer;}
+#grace-dialog-title{padding:15px 0px; text-align:center; font-size:22px; line-height:38px;}
+#grace-dialog-content{padding:0px; text-align:center; line-height:2.2em; color:#888888;}
+#grace-dialog-btns{padding:20px 0px; width:100%; margin-top:12px;}
+#grace-dialog-btns div{width:118px; height:40px; line-height:40px; margin:0px 2%; text-align:center; cursor:pointer; background:#1B8AFF; color:#FFFFFF; float:left;}
+#grace-dialog-btns div:hover{opacity:0.95;}
+#grace-dialog-loading {width:100px; height:100px; position:relative; margin:0 auto; margin-top:22px;}
+#grace-dialog-loading span {display:inline-block;width:16px; height:16px; border-radius:50%; background:#31A990; position:absolute;-webkit-animation:load 1.04s ease infinite;}
+@-webkit-keyframes load {0% {opacity:1;} 100% {opacity:0.2;}}
+#grace-dialog-loading span:nth-child(1) {left:0;top:50%;margin-top:-8px;-webkit-animation-delay:0.13s;}
+#grace-dialog-loading span:nth-child(2) {left:14px;top:14px;-webkit-animation-delay:0.26s;}
+#grace-dialog-loading span:nth-child(3) {left:50%;top:0;margin-left:-8px;-webkit-animation-delay:0.39s;}
+#grace-dialog-loading span:nth-child(4) {top:14px;right:14px;-webkit-animation-delay:0.52s;}
+#grace-dialog-loading span:nth-child(5) {right:0;top:50%;margin-top:-8px;-webkit-animation-delay:0.65s;}
+#grace-dialog-loading span:nth-child(6) {right:14px;bottom:14px;-webkit-animation-delay:0.78s;}
+#grace-dialog-loading span:nth-child(7) {bottom:0;left:50%;margin-left:-8px;-webkit-animation-delay:0.91s;}
+#grace-dialog-loading span:nth-child(8) {bottom:14px;left:14px;-webkit-animation-delay:1.04s;}
+#grace-dialog-loading-text{height:38px; line-height:38px; text-align:center; padding:12px; margin-top:8px;}
+
+/* accordion */
+.grace-accordion{}
+.grace-accordion dt span{padding-right:10px; font-size:18px; color:#555;}
+.grace-accordion dt{line-height:50px; cursor:pointer; font-size:16px; border-bottom:1px dashed #D3D6DA; margin-bottom:8px;}
+.grace-accordion dt i{font-size:12px !important; float:right; color:#C6C6C6;}
+.grace-accordion dd{line-height:44px; display:none;}
+.grace-accordion dd a{display:block; width:100%; line-height:1.8em; padding:6px 0px; text-indent:2em; color:#666;}
+.grace-accordion .grace-current{color:#1B8AFF !important; font-size:15px; font-weight:700;}
+
+/* center button */
+.grace-center-button{width:218px; height:36px; line-height:36px; color:#2F4056; border:1px solid #2F4056; display:block; margin:0 auto; border-radius:36px; text-align:center; font-size:16px;}
+.grace-center-button:hover{text-decoration:none; color:#1B8AFF;  border-color:#1B8AFF;}
+
+/* media list */
+.sabackhome{display:none;} 
+.grace-media-list{padding:20px 0px;}
+.grace-media-list li{padding:8px; margin:5px 0px;}
+.grace-media-list li a{display:block; overflow:hidden;}
+.grace-media-list li h1{font-size:15px; font-weight:400; line-height:1.8em;}
+.grace-media-list .face{width:58px; margin-top:3px; float:left; border:2px solid #FFF; font-size:0px; overflow:hidden;}
+.grace-media-list .face img{width:100%;}
+.grace-media-list-title-face{width:838px; float:right; font-size:15px;}
+.grace-media-list .img{width:158px; margin-top:3px; float:left; border:2px solid #FFF; font-size:0px; overflow:hidden;}
+.grace-media-list .img img{width:100%;}
+.grace-media-list-title{width:726px; float:right; font-size:15px;}
+.grace-media-list h1{font-size:16px; font-weight:400; line-height:1.8em;}
+.grace-media-list p{font-size:11px; line-height:26px; color:#666; padding-top:2px;}
+.grace-media-list p a{display: inline !important; font-size:11px; line-height:26px; color:#666; margin:0px 8px;}
+.grace-media-list p a i{font-size:11px; margin-right:8px;}
+
+/* grace-pager */
+.grace-pager{float:right;}
+.grace-pager a{display:block; background:#F5F5F5; padding:0px 10px; height:30px; line-height:30px; float:left; margin:3px; border-radius:2px;}
+.grace-pager a:hover{background:#2F4056; text-decoration:none; color:#FFF;}
+.grace-pager .grace-current{background:#1B8AFF !important; color:#FFF !important;}
+
+/* grace slide menu */
+.grace-slide-menu{position:fixed; z-index:9; padding:10px 0px; width:120px; left:0; top:58px; height:auto; background:#1B8AFF; display:none;}
+.grace-slide-menu a{display:block; width:100%; height:40px; line-height:40px; text-align:center; padding:0px !important; margin:0px; border:0px !important; color:#FFF !important;}
+.grace-slide-menu a:hover{background:#413DE9; text-decoration:none;}
+
+/* comments */
+.grace-comments{padding:12px 0px;}
+.grace-comments-footer{}
+.grace-comments-footer .face{line-height:28px; font-size:12px; float:left;}
+.grace-comments-footer .face img{width:28px; float:left; margin-right:8px;}
+.grace-comments-list{padding:15px 0px;}
+.grace-comments-list td{font-size:12px !important; line-height:2.2em; color:#777777; padding:12px 0px;}
+.grace-comments-list td span{color:#1B8AFF; font-weight:700; font-size:13px;}
+.grace-comments-list td p{font-size:13px; line-height:2.2em; padding-bottom:12px;}
+.grace-comments-list .img{width:36px; margin-top:6px; font-size:0; margin-left:6px;}
+#grace-at-in{font-size:12px; color:#1B8AFF; font-weight:700;}
+#grace-comments-more{color:#555555; font-size:12px; text-align:center; line-height:40px;}
+#grace-comments-more *{color:#555555; font-size:12px; text-align:center; line-height:40px;}
+
+/* swipe */
+.grace-swipe{width:100%; position:relative;}
+.grace-swipe-items{width:500%; position:relative; left:0; top:0; background-size:100% 358px;}
+.grace-swipe-item{width:20%; font-size:0px; float:left; background-size:100% 358px;}
+.grace-swipe-item img{width:100%;}
+.grace-swipe-indicator{width:96%; position:absolute; z-index:3; left:2%; bottom:8px; display:none;}
+.grace-swipe-indicators{width:15px; border-radius:3px; height:3px; background:#FFFFFF; float:left; margin:0px 3px;}
+.grace-swipe-indicator-active{background:#1B8AFF !important;}
+
+/* login */
+.grace-login{width:460px; background:rgba(0,0,0, 0.1); margin:0 auto; margin-top:150px; padding:30px;}
+.grace-login-title{padding:8px; padding-bottom:18px; text-align:center; line-height:30px; color:#FFF; font-size:24px;}
+.grace-login td{padding:10px; color:#FFF; line-height:30px;}
+.grace-login-foot{padding:8px; margin-top:12px; text-align:center; line-height:30px; color:#FFF;}
+.grace-login-foot a{color:#FFF;}
+.grace-login-foot i{font-size:18px; color:#FFF;}
+#grace-login-vcode{float:left; cursor:pointer;}
+.grace-login-reg{display:block; float:left; line-height:34px; padding:0px 10px; margin-left:20px; color:#FFF;}
+
+/* account */
+.grace-account{width:800px; margin:0 auto;}
+.grace-account-face{width:100px; height:100px; border-radius:100px; margin:0 auto; margin-top:20px;}
+.grace-account-face img{width:100%;}
+.grace-account-lines{line-height:40px; text-align:center; margin-top:8px;}
+.grace-account-menus{margin-top:28px;}
+.grace-account-menus li{width:31.3%; float:left; margin:10px 1%; background:#F1F4F5;}
+.grace-account-menus li i{margin-right:10px;}
+.grace-account-menus li a{display:block; width:100%; line-height:30px; padding:20px 0px; text-align:center;}
+.grace-account-menus li a:hover{background:#F0F0F0;}
+.grace-select-img{text-align:center; width:100%; height:36px; line-height:36px; background:#F2F2F2; position:relative; cursor:pointer;}
+.grace-select-img input{display:block; opacity:0; width:100%; left:0; top:0; position:absolute; height:36px; z-index:2; cursor:pointer;}
+#grace-select-img-in{padding:15px 0px;}
+#grace-select-img-in img{width:100%;}
+
+/* grace cate */
+.grace-cate{margin-top:30px;}
+.grace-cate a{padding:5px 12px; line-height:22px; font-size:13px; margin-right:12px; float:left;}
+.grace-cate .grace-current{background:#2F4056; color:#FFF;}
+.pln{color:#000}@media screen{.str{color:#080}.kwd{color:#008}.com{color:#800}.typ{color:#606}.lit{color:#066}.pun,.opn,.clo{color:#660}.tag{color:#008}.atn{color:#606}.atv{color:#080}.dec,.var{color:#606}.fun{color:red}}@media print,projection{.str{color:#060}.kwd{color:#006;font-weight:bold}.com{color:#600;font-style:italic}.typ{color:#404;font-weight:bold}.lit{color:#044}.pun,.opn,.clo{color:#440}.tag{color:#006;font-weight:bold}.atn{color:#404}.atv{color:#060}}pre.prettyprint{padding:12px;}ol.linenums{margin-top:0;margin-bottom:0}li.L0,li.L1,li.L2,li.L3,li.L5,li.L6,li.L7,li.L8{list-style-type:none}li.L1,li.L3,li.L5,li.L7,li.L9{background:#eee}
+
+-webkit-animation:gradient 7.5s ease-in-out infinite;animation:gradient 7.5s ease-in-out infinite}
+@-webkit-keyframes gradient{50%{background-position:100% 0}}@keyframes gradient{50%{background-position:100% 0}}
+.banner-gradient{
+	width:100%; height:358px;
+    background: -webkit-linear-gradient(45deg,#5a3694 0,#13bdce 33%,#0094d9 66%,#6fc7b5 100%);
+    background: linear-gradient(45deg,#5a3694 0,#13bdce 33%,#0094d9 66%,#6fc7b5 100%);
+    background-size: 400%;
+    background-position: 0 100%;
+    -webkit-animation: gradient 7.5s ease-in-out infinite;
+    animation: gradient 7.5s ease-in-out infinite;
+}
+
+@media screen and (max-width:800px){
+	.sabackhome{display:block;line-height:2em;} 
+	.grace-main{width:100%; margin:0 auto;}
+	.grace-account{width:96%; margin:0 2%;}
+	.grace-header{height:58px;}
+	.grace-logo{float:left; margin:8px 0px; width:98px;}
+	.grace-banner{height:188px; background-size:auto auto;}
+	.grace-banner-samll{height:158px; background-size:auto auto;}
+	.grace-line-banner{background-size:auto; height:30px;}
+	.grace-header-line{height:44px;}
+	.grace-h1{font-size:24px;}
+	.grace-h2{font-size:20px;}
+	.grace-h3{font-size:18px;}
+	.grace-banner .grace-banner-top1{padding-top:48px;}
+	.grace-banner .grace-banner-top2{padding-top:8px;}
+	.grace-banner-samll .grace-banner-top1{padding-top:28px;}
+	.grace-banner-samll .grace-banner-top2{padding-top:8px;}
+	.grace-line-title span{font-size:18px;}
+	.grace-margin-top{margin-top:18px !important;}
+	.grace-blocks{padding:0px 12px;}
+	.grace-blocks li{width:98%; float:none; margin:12px 0px;}
+	.grace-block-title{font-size:16px; line-height:28px;}
+	.grace-block-title i{font-size:16px;}
+	.grace-block-text{text-indent:2em; line-height:1.8em; font-size:12px; color:#888; padding-bottom:8px;}
+	.grace-footer{padding:15px; line-height:1.6em; font-size:12px;}
+	.grace-footer *{text-align:center; color:#525252; font-size:12px;}
+	.grace-menu{display:block;}
+	#grace-dialog-msg{width:75%;}
+	.grace-content strong{font-size:15px;}
+	.grace-mobile-hide{display:none !important;}
+	.grace-center-button{width:50; height:32px; line-height:32px; color:#2F4056; border:1px solid #2F4056; display:block; margin:0 auto; border-radius:32px; text-align:center; font-size:14px;}
+	
+	.grace-media-list li{padding:5px 0;}
+	.grace-media-list .face{width:10%; margin-top:5px; float:left; border:2px solid #FFF; font-size:0; overflow:hidden;}
+	.grace-media-list .face img{width:100%;}
+	.grace-media-list .img{width:15%; margin-top:3px; float:left; border:2px solid #FFF; font-size:0px; overflow:hidden;}
+	.grace-media-list .img img{width:100%;}
+	.grace-media-list-title{width:82%; float:right; font-size:15px;}
+	.grace-media-list-title-face{width:87%; float:right; font-size:15px;}
+	.grace-media-list h1{font-size:14px !important; font-weight:400 !important; line-height:1.5em;}
+	.grace-media-list p{font-size:10px; line-height:26px; color:#666; padding-top:2px;}
+	.grace-r{width:94%; float:none; padding:15px 3%;}
+	.grace-login{width:90% !important; background:rgba(0,0,0, 0.2); margin:0 auto; padding:10px 2%;}
+}
