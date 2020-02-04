@@ -1,6 +1,17 @@
 # SaHelp-For-Typecho
 SaHelp Theme 是一款 使用说明 / 帮助文件 / WIKI文档使用的Typecho主题
 
+# 注意
+启用主题前需要在`typecho_metas`表添加字段iconfont
+ALTER TABLE typecho_metas ADD  iconfont varchar(20) DEFAULT 'icon-kuaisukaishi';
+
+admin/manage-categories.php 也需要添加一行代码
+54行添加
+ <th><?php _e('图标名'); ?></th>
+ 
+74行<td><?php $categories->slug(); ?></td> 下面添加
+<td><?php $categories->iconfont(); ?></td>
+
 
 # 亮点功能：
 自适应PC端和手机端
