@@ -6,20 +6,7 @@ SaHelp Theme 是一款 使用说明 / 帮助文件 / WIKI文档使用的Typecho�
 <code>
 ALTER TABLE typecho_metas ADD  iconfont varchar(20) DEFAULT 'icon-kuaisukaishi';
 </code>
-admin/manage-categories.php 也需要添加一行代码
-54行添加
-<code>
- <th><?php _e('图标名'); ?></th>
-</code>
- 
-74行
-<code>
-<td><?php $categories->slug(); ?></td>
-</code>
-下面添加
-<code>
-<td><?php $categories->iconfont(); ?></td>
-</code>
+
 
 # 亮点功能：
 自适应PC端和手机端
