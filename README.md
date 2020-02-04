@@ -7,11 +7,14 @@ ALTER TABLE typecho_metas ADD  iconfont varchar(20) DEFAULT 'icon-kuaisukaishi';
 
 admin/manage-categories.php 也需要添加一行代码
 54行添加
+<code>
  <th><?php _e('图标名'); ?></th>
+</code>
  
 74行<td><?php $categories->slug(); ?></td> 下面添加
+<code>
 <td><?php $categories->iconfont(); ?></td>
-
+</code>
 
 # 亮点功能：
 自适应PC端和手机端
