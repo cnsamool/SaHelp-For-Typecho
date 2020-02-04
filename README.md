@@ -3,6 +3,8 @@ SaHelp Theme 是一款 使用说明 / 帮助文件 / WIKI文档使用的Typecho�
 
 # 注意
 启用主题前需要在`typecho_metas`表添加字段iconfont
+
+
 <code>
 ALTER TABLE typecho_metas ADD  iconfont varchar(20) DEFAULT 'icon-kuaisukaishi';
 </code>
